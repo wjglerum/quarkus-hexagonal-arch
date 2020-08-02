@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/rest/v2/name/netherlands"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "netherlands.json"
+  }
+}

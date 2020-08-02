@@ -1,0 +1,22 @@
+quarkus:
+  log:
+    console:
+      enable: true
+      format: '%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n'
+      level: TRACE
+      color: true
+  datasource:
+    url: jdbc:tc:sqlserver:latest:///tams
+    driver: org.testcontainers.jdbc.ContainerDatabaseDriver
+  hibernate-orm:
+    dialect: org.hibernate.dialect.SQLServerDialect
+    log:
+      sql: true
+    database:
+      generation: create
+
+nl:
+  wjglerum:
+    country-route:
+      delay: "PT5M"
+      interval: "0 * * ? * * *"

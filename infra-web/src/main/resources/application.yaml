@@ -1,0 +1,26 @@
+quarkus:
+  log:
+    console:
+      enable: true
+      format: '%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n'
+      level: TRACE
+      color: true
+  datasource:
+    db-kind: mssql
+    username: sa
+    password: yourStrong(!)Password
+    jdbc:
+      url: jdbc:sqlserver://localhost
+  hibernate-orm:
+    database:
+      generation: drop-and-create
+      default-schema: dbo
+      default-catalog: master
+
+nl:
+  wjglerum:
+    country-api/mp-rest/url: "https://restcountries.eu"
+    country-api/mp-rest/scope: "javax.inject.Singleton"
+    country-route:
+      delay: "PT5M"
+      interval: "0 * * ? * * *"
